@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exoplanet Detector | AI-Powered Discovery</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌌 Stellarion AI</h1>
+        <p> This AI model can detect exoplanets! </p>
+        <p>Upload stellar data and set your detection threshold.</p>
+
+        <form action="/predict/" enctype="multipart/form-data" method="post">
+            <input type="file" name="file" accept=".csv" required><br>
+
+            <label for="threshold">🔬 Detection Threshold:</label><br>
+            <input type="range" name="threshold" min="0" max="1" step="0.01" value="0.5" oninput="this.nextElementSibling.value = this.value">
+            <output>0.5</output><br>
+
+            <button type="submit">🚀 Analyze</button>
+        </form>
+
+        {% if error %}
+            <p class="error">⚠️ Error: {{ error }}</p>
+        {% endif %}
+
+        {% if results %}
+        <div class="results">
+            <h2>Results</h2>
+            <table>
+                <tr><th>Prediction</th><th>Probability</th></tr>
+                {% for r in results %}
+                <tr>
+                    <td>{{ r.prediction }}</td>
+                    <td>{{ r.probability }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            <p>🧠 Threshold Used: {{ threshold }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
