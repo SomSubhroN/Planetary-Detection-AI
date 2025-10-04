@@ -5,7 +5,7 @@ Developed for NASA Space Apps Challenge 2025
 Developer: Som Subhro Nath
 Team: Raven Hart Vexmoor
 Bachelor of Science (CS) — University of Calcutta
-IBM Design Thinking Practitioner | Hackerrank Software Developer
+IBM Design Thinking Practitioner | Hackerrank Software Developer | Finalist in vivo Ignite Hackathon
 Independent AI Researcher | FastAPI Developer | XGBoost Specialist
 
 #  Project Overview
@@ -35,10 +35,10 @@ Output	Probability score of planet existence
 
 # Workflow Overview
 
-Data Collection:
+## Data Collection:
 Publicly available NASA and Kaggle datasets were used for stellar characteristics.
 
-Preprocessing:
+## Preprocessing:
 
 Missing values handled
 
@@ -48,13 +48,13 @@ Features normalized
 
 Data merged across multiple files for consistency
 
-Bias Correction:
+## Bias Correction:
 SMOTE applied to achieve parity between classes (planet_present, planet_absent).
 
-Model Training:
+## Model Training:
 XGBoost classifier was trained on cleansed, resampled data.
 
-Deployment (FastAPI):
+## Deployment (FastAPI):
 
 Built a local API endpoint for inference
 
@@ -78,7 +78,7 @@ Enabled public deployment using NGROK (FaaS demonstration-ready)
 Follow these simple steps to deploy the system locally or online — no premium hosting required.
 
 🔹 Step 1: Clone the Repository
-git clone https://github.com/somsubhronath/Planetary-Detection-AI.git
+git clone https://github.com/SomSubhroN/Planetary-Detection-AI.git
 cd Planetary-Detection-AI
 
 🔹 Step 2: Install Dependencies
@@ -87,13 +87,16 @@ Make sure Python 3.9+ is installed, then run:
 
 pip install -r requirements.txt
 
+Download the pretrained datasets from:
+https://drive.google.com/drive/folders/1sAkGQrBa-x4VGQdtD08sQtEC74Fyu0w1?usp=sharing 
+
 🔹 Step 3: Run the FastAPI App (Local Deployment)
-uvicorn app:app --host 0.0.0.0 --port 8000
+uvicorn main:app --host 0.0.0.0 --port 8000
 
 
 Now open your browser and visit:
 
-http://127.0.0.1:8000
+http://127.0.0.1:8000/docs
 
 
 You’ll see the interactive GUI and the Swagger API docs at:
