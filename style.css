@@ -1,0 +1,70 @@
+body {
+    background: linear-gradient(180deg, #001d3d, #000814);
+    color: #e0e8f9;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 40px;
+}
+
+.container {
+    background: rgba(0, 18, 50, 0.9);
+    border-radius: 20px;
+    padding: 40px;
+    width: 80%;
+    margin: auto;
+    box-shadow: 0 0 30px rgba(0, 80, 255, 0.3);
+    border: 1px solid #00509d;
+}
+
+h1 {
+    color: #00b4d8;
+    margin-bottom: 10px;
+}
+
+input[type="file"] {
+    background: #0077b6;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+}
+
+input[type="range"] {
+    width: 50%;
+    accent-color: #90e0ef;
+    margin-top: 10px;
+}
+
+button {
+    background: #00b4d8;
+    color: #001d3d;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #90e0ef;
+    color: #000;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border-bottom: 1px solid #00b4d8;
+    padding: 10px;
+}
+
+.error {
+    color: #ff4d6d;
+    margin-top: 10px;
+}
