@@ -64,14 +64,13 @@ Enabled public deployment using NGROK (FaaS demonstration-ready)
 
 # Project Structure
 /Planetary-Detection-AI
-│
-├── app.py                     # FastAPI app for user inference
-├── model.pkl                  # Pre-trained XGBoost model
-├── main.ipynb                 # Jupyter Notebook (data cleaning + training)
-├── dataset/                   # Processed dataset files
-├── requirements.txt            # All dependencies
-├── README.md                   # Documentation (this file)
-└── demo_video.mp4              # Demonstration video for NASA Space App
+app.py                     # FastAPI app for user inference
+model.pkl                  # Pre-trained XGBoost model
+main.ipynb                 # Jupyter Notebook (data cleaning + training)
+dataset/                   # Processed dataset files
+requirements.txt            # All dependencies
+README.md                   # Documentation (this file)
+demo_video.mp4              # Demonstration video for NASA Space App
 
 # Installation and Deployment Guide
 
